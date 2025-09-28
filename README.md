@@ -1,106 +1,85 @@
-# Team Allocator
+# Team Allocator - Frontend
 
-A full-stack web application built with modern technologies for team allocation and management.
+Modern React application built with Vite, TypeScript, and Tailwind CSS for team allocation and management.
 
 ## 🚀 Tech Stack
 
-### Frontend
 - **React 18** with **TypeScript**
-- **Vite** for fast development and building
-- **Tailwind CSS** for styling
+- **Vite** for fast development and building  
+- **Tailwind CSS** for utility-first styling
+- **ESLint** for code linting
 - **npm** package manager
 
-### Backend
-- **Node.js** with **Express**
-- **TypeScript** for type safety
-- **Prisma** ORM with **PostgreSQL** database
-- **npm** package manager
-
-## 📁 Project Structure
-
-```
-team-allocator/
-├── frontend/          # React + Vite + TypeScript + Tailwind
-├── backend/           # Express + TypeScript + Prisma
-└── README.md
-```
-
-## 🛠️ Getting Started
+## 🛠️ Setup
 
 ### Prerequisites
-- Node.js v18+ (v22.19+ recommended)
-- PostgreSQL database
-- npm v10+
+- Node.js (v16 or higher recommended)
+- npm package manager
 
 ### Installation
 
-1. **Clone and navigate to the project directory**
-   ```bash
-   cd team-allocator
-   ```
-
-2. **Install frontend dependencies**
+1. **Navigate to frontend directory**
    ```bash
    cd frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
    npm install
    ```
 
-3. **Install backend dependencies**
-   ```bash
-   cd ../backend
-   npm install
-   ```
+## 🏃‍♂️ Running the Application
 
-4. **Setup environment variables**
-   - Copy `.env.example` to `.env` in the backend folder
-   - Update the `DATABASE_URL` with your PostgreSQL connection string
-
-5. **Setup database**
-   ```bash
-   # In backend directory
-   npx prisma generate
-   npx prisma db push
-   ```
-
-### Development
-
-**Start the backend server:**
+### Development Mode
 ```bash
-cd backend
 npm run dev
 ```
+Application will be available at `http://localhost:5173`
 
-**Start the frontend development server:**
+### Build for Production
 ```bash
-cd frontend
-npm run dev
+npm run build
 ```
 
-The frontend will be available at `http://localhost:5173` and the backend at `http://localhost:3000`.
+### Preview Production Build
+```bash
+npm run preview
+```
 
 ## 📝 Available Scripts
 
-### Frontend
-- `npm run dev` - Start development server
+- `npm run dev` - Start development server with hot reloading
 - `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code linting
 
-### Backend
-- `npm run dev` - Start development server with hot reload
-- `npm run build` - Build TypeScript to JavaScript
-- `npm start` - Start production server
-- `npm run prisma:generate` - Generate Prisma client
-- `npm run prisma:push` - Push schema changes to database
+## 🎨 Styling with Tailwind CSS
 
-## 🤝 Contributing
+This project uses Tailwind CSS for styling. The main landing page demonstrates various Tailwind utilities including:
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+- Responsive design with `md:` breakpoints
+- Gradient backgrounds (`bg-gradient-to-br`)
+- Hover effects (`hover:bg-blue-700`)
+- Shadows and transitions
+- Grid layouts (`grid md:grid-cols-2`)
 
-## 📄 License
+### Customization
+Edit `tailwind.config.js` to customize colors, fonts, spacing, and more.
 
-This project is licensed under the MIT License.
+## 🌐 API Integration
+
+Ready for integration with the backend API running on `http://localhost:3000`. The app is structured to easily add:
+
+- User authentication
+- Team management
+- Real-time updates
+- Form handling
+
+## 📱 Features
+
+Current implementation includes:
+- Welcome landing page
+- Responsive design
+- Component-based architecture
+- TypeScript for type safety
+- Modern React patterns
